@@ -1,0 +1,9 @@
+﻿@model List<AdoMvc.Models.Student>
+@foreach (var student in Model)
+{
+    @student.Name
+    @student.Email
+    <a asp-action="edit" asp-route-id="@student.ID" class="btn btn-primary">Edit</a>
+    <a asp-action="delete" asp-route-id="@student.ID" class="btn btn-primary">Delete</a>
+}
+
